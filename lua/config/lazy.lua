@@ -22,6 +22,8 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.dart" },
     -- Import the ruby extra
     { import = "lazyvim.plugins.extras.lang.ruby" },
+    -- Import the illuminate extra for full capabilities
+    { import = "lazyvim.plugins.extras.editor.illuminate" },
     -- import/override with your plugins
     { import = "plugins" },
   },
@@ -55,3 +57,6 @@ require("lazy").setup({
     },
   },
 })
+
+-- Line Number color
+vim.api.nvim_set_hl(0, "LineNr", { fg = "#a4a5af" })
