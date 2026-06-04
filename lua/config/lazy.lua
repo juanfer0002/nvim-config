@@ -18,12 +18,15 @@ require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
-    -- Import the dart extra
+
+    -- Import extras for languages
     { import = "lazyvim.plugins.extras.lang.dart" },
-    -- Import the ruby extra
     { import = "lazyvim.plugins.extras.lang.ruby" },
+    { import = "lazyvim.plugins.extras.lang.yaml" },
+
     -- Import the illuminate extra for full capabilities
     { import = "lazyvim.plugins.extras.editor.illuminate" },
+
     -- import/override with your plugins
     { import = "plugins" },
   },
@@ -64,3 +67,4 @@ vim.api.nvim_set_hl(0, "TreesitterContextLineNumber", { fg = "#ffffff" })
 
 vim.opt.eol = true
 vim.opt.fixeol = true
+
