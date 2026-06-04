@@ -60,6 +60,7 @@ require("lazy").setup({
 
 -- Line Number color
 vim.api.nvim_set_hl(0, "LineNr", { fg = "#a4a5af" })
+vim.api.nvim_set_hl(0, "TreesitterContextLineNumber", { fg = "#ffffff" })
 
 vim.opt.eol = true
 vim.opt.fixeol = true
