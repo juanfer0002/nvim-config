@@ -20,6 +20,11 @@ return {
           },
         },
       },
+      lsp = {
+        signature = {
+          enabled = false,
+        }
+      }
     },
   },
 }

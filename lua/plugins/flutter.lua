@@ -39,6 +39,7 @@ return {
             renameFilesWithClasses = "prompt",
             enableSnippets = true,
             updateImportsOnRename = true,
+            closingLabels = false,
           },
           on_attach = function(client, bufnr)
             local opts = { noremap = true, silent = true, buffer = bufnr }
@@ -55,14 +56,20 @@ return {
             vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
             vim.keymap.set("n", "<leader>cf", function()
               vim.lsp.buf.format({ async = true })
-            end, opts)
+            end, vim.tbl_extend("force", opts, { desc = "Format code" }))
             -- Diagnostics
-            vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
-            vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
-            vim.keymap.set("n", "<leader>cd", vim.diagnostic.open_float, opts)
+            -- vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
+            -- vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
+            vim.keymap.set(
+              "n",
+              "<leader>cd",
+              vim.diagnostic.open_float,
+              vim.tbl_extend("force", opts, { desc = "Visualize Diagnostics" })
+            )
           end,
         },
       })
     end,
   },
 }
+
