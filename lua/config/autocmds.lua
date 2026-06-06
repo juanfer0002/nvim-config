@@ -20,4 +20,14 @@ vim.api.nvim_create_autocmd("BufWritePost", {
   end,
 })
 
+-- Stop all current LSP clients
+vim.api.nvim_create_autocmd('VimLeavePre', {
+  desc = 'Force stop LSP clients on exit',
+  callback = function()
+    local clients = vim.lsp.get_clients()
+    for _, client in ipairs(clients) do
+      client.stop(client, false)
+    end
+  end,
+})
 
