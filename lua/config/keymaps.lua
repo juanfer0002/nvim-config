@@ -30,3 +30,4 @@ vim.keymap.set("n", "<leader>fyn", function()
   vim.fn.setreg("+", path)
   vim.notify("Copied filename: " .. path)
 end, { desc = "Copy filename" })
+

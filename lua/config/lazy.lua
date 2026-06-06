@@ -20,9 +20,11 @@ require("lazy").setup({
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
 
     -- Import extras for languages
+    { import = "lazyvim.plugins.extras.lang.angular" },
     { import = "lazyvim.plugins.extras.lang.dart" },
     { import = "lazyvim.plugins.extras.lang.ruby" },
     { import = "lazyvim.plugins.extras.lang.yaml" },
+    { import = "lazyvim.plugins.extras.lang.dotnet" },
 
     -- Import the illuminate extra for full capabilities
     { import = "lazyvim.plugins.extras.editor.illuminate" },
@@ -67,4 +69,6 @@ vim.api.nvim_set_hl(0, "TreesitterContextLineNumber", { fg = "#ffffff" })
 
 vim.opt.eol = true
 vim.opt.fixeol = true
+
+vim.api.nvim_set_hl(0, "FloatHoverBorder", { fg = "#f5c2e7" }) -- Custom color for custom border
 
