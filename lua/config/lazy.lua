@@ -71,3 +71,8 @@ vim.opt.fixeol = true
 
 vim.api.nvim_set_hl(0, "FloatHoverBorder", { fg = "#f5c2e7" }) -- Custom color for custom border
 
+
+-- White space
+vim.opt.list = true
+vim.opt.listchars = { tab = '› ', trail = '•', space = '·' }
+vim.cmd([[highlight Whitespace guifg=#3b4261 gui=nocombine]])

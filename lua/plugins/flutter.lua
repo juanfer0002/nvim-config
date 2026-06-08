@@ -24,6 +24,9 @@ return {
         debugger = {
           enabled = false,
         },
+        closing_tags = {
+          enabled = false
+        },
         lsp = {
           -- Disable dynamic file-watcher registration to avoid the Dart language
           -- server sending "**/**.dart" (invalid glob in Neovim 0.12+).
@@ -39,7 +42,6 @@ return {
             renameFilesWithClasses = "prompt",
             enableSnippets = true,
             updateImportsOnRename = true,
-            closingLabels = false,
           },
           on_attach = function(client, bufnr)
             local opts = { noremap = true, silent = true, buffer = bufnr }

@@ -9,16 +9,16 @@
 --
 
 -- Fix End-Of-File (EOF) to always include an empty line
-vim.api.nvim_create_autocmd("BufWritePost", {
-  pattern = "*",
-  callback = function()
-    local last_line = vim.fn.line("$")
-    local last_content = vim.fn.getline(last_line)
-    if last_content ~= "" then
-      vim.fn.append(last_line, "")
-    end
-  end,
-})
+-- vim.api.nvim_create_autocmd("BufWritePost", {
+--   pattern = "*",
+--   callback = function()
+--     local last_line = vim.fn.line("$")
+--     local last_content = vim.fn.getline(last_line)
+--     if last_content ~= "" then
+--       vim.fn.append(last_line, "")
+--     end
+--   end,
+-- })
 
 -- Stop all current LSP clients
 vim.api.nvim_create_autocmd('VimLeavePre', {
