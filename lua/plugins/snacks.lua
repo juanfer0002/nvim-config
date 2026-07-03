@@ -22,5 +22,10 @@ return {
       only_current = false,
       -- char = "|"
     }
+
+    opts.styles = opts.styles or {}
+
+    opts.styles.notification = opts.styles.notification or {}
+    opts.styles.notification.wo = { wrap = true }
   end,
 }

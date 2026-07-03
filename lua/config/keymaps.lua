@@ -31,3 +31,19 @@ vim.keymap.set("n", "<leader>fyn", function()
   vim.notify("Copied filename: " .. path)
 end, { desc = "Copy filename" })
 
+vim.keymap.set(
+  "i",
+  "<C-l>",
+  "copilot#AcceptWord()",
+  { expr = true, silent = true, desc = "Accept Copilot Word" }
+)
+
+vim.keymap.set(
+  'i',
+  '<C-j>',
+  'copilot#Accept("\\<CR>")',
+  { expr = true, replace_keycodes = false, desc = "Accept Copilot Suggestion" }
+)
+
+vim.g.copilot_no_tab_map = true
+
