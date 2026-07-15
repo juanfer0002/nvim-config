@@ -31,3 +31,11 @@ vim.api.nvim_create_autocmd('VimLeavePre', {
   end,
 })
 
+-- Set conceallevel to 0 for all filetypes
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = '*',
+  callback = function()
+    vim.opt_local.conceallevel = 0
+  end,
+})
+
