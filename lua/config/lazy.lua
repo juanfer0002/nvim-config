@@ -21,9 +21,10 @@ require("lazy").setup({
 
     -- Import extras for languages
     { import = "lazyvim.plugins.extras.lang.angular" },
+    { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.lang.ruby" },
     { import = "lazyvim.plugins.extras.lang.yaml" },
-    -- { import = "lazyvim.plugins.extras.lang.dotnet" },
+    { import = "lazyvim.plugins.extras.lang.dotnet" },
 
     -- Import the illuminate extra for full capabilities
     { import = "lazyvim.plugins.extras.editor.illuminate" },
@@ -71,8 +72,7 @@ vim.opt.fixeol = true
 
 vim.api.nvim_set_hl(0, "FloatHoverBorder", { fg = "#f5c2e7" }) -- Custom color for custom border
 
-
 -- White space
 vim.opt.list = true
-vim.opt.listchars = { tab = '› ', trail = '•', space = '·' }
+vim.opt.listchars = { tab = "› ", trail = "•", space = "·" }
 vim.cmd([[highlight Whitespace guifg=#3b4261 gui=nocombine]])
