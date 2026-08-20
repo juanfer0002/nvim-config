@@ -24,7 +24,6 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.lang.ruby" },
     { import = "lazyvim.plugins.extras.lang.yaml" },
-    { import = "lazyvim.plugins.extras.lang.dotnet" },
 
     -- Import the illuminate extra for full capabilities
     { import = "lazyvim.plugins.extras.editor.illuminate" },

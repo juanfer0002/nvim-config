@@ -39,3 +39,11 @@ vim.api.nvim_create_autocmd('FileType', {
   end,
 })
 
+
+-- Helps razor to not apply html syntax highlighting to cshtml files
+vim.filetype.add({
+  extension = {
+    razor = "razor",
+    cshtml = "razor",
+  },
+})
